@@ -54,7 +54,49 @@ void task4()
     std::cout << f << std::endl;
 }
 
+    const int N =5;
+    const int M = 3;
 
+    void Print_Matr(int A[N][M]);
+    void Input_Matr(int A[N][M]);
+    void Change_Els(int A[N][M]);
+    void swap(int A[N][M], int l)
+
+    void swap(int A[N][M], int k) {
+        int j;
+        int B[M];
+        for (j = 0; j < M; j++) {
+            B[j] = A[k][j];
+            A[k][j] = A[N - 1 - k][j];
+            A[N - 1 - k][j] = B[j];
+        }
+    }
+
+    void Change_Els(int A[N][M]) {
+        int i;
+        for ( i = 0; i < (int)N / 2 ; ++i) {
+            swap(A, i);
+        }
+    }
+
+    void Print_Matr(int A[N][M]) {
+        int i, j;
+        for (i = 0; i < N ; i++) {
+            for (j = 0; j < M ; j++) {
+                std::cout << A[i][j] << " ";
+            }
+        }
+        std::cout <<  std::endl;
+    }
+
+    void Input_Matr(int A[N][M]) {
+        int i, j;
+        for (i = 0; i < N ; i++) {
+            for (j = 0; j < M ; j++) {
+                std::cout << A[i][j];
+            }
+        }
+    }
 
 int main() {
 //  task1();
@@ -62,5 +104,10 @@ int main() {
 //  task3();
 //  task4();
 
+    int A[N][M];
+    Input_Matr(A);
+    Print_Matr(A);
+    Change_Els(A);
+    Print_Matr(A);
     return 0;
 }
