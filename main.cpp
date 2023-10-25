@@ -60,7 +60,7 @@ void task4()
     void Print_Matr(int A[N][M]);
     void Input_Matr(int A[N][M]);
     void Change_Els(int A[N][M]);
-    void swap(int A[N][M], int l)
+    void swap(int A[N][M], int l);
 
     void swap(int A[N][M], int k) {
         int j;
@@ -98,16 +98,66 @@ void task4()
         }
     }
 
+    void task5()
+    {
+        char ch;
+        float a, b;
+        while(1)
+        {
+            std::cin >> a >> b;
+            std::cin >> ch;
+            switch (ch) {
+                case '+':
+                    std::cout << a + b << std::endl;
+                    break;
+                case '-':
+                    std::cout << a - b << std::endl;
+                    break;
+                case '/':
+                    std::cout << a / b << std::endl;
+                    break;
+                case '*':
+                    std::cout << a * b << std::endl;
+                    break;
+                case 'q':
+                    break;
+            }
+        }
+    }
+
+    void task6()
+    {
+        char b;
+        float a, t;
+
+            std::cin >> a;
+            std::cin >> b;
+            switch (b) {
+                case 'c':
+                    t = a * 9/5 + 32;
+                    std::cout << t << std::endl;
+                    break;
+                case 'f':
+                    t = ( a - 32 ) *5/9;
+                    std::cout << t << std::endl;
+                    break;
+            }
+
+    }
+
 int main() {
 //  task1();
 //  task2();
 //  task3();
 //  task4();
+//  task5();
+    task6();
 
-    int A[N][M];
+  /*  int A[N][M];
     Input_Matr(A);
     Print_Matr(A);
     Change_Els(A);
-    Print_Matr(A);
-    return 0;
+Print_Matr(A); */
+
+return 0;
 }
